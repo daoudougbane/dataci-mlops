@@ -1,0 +1,35 @@
+stages:
+  clean:
+    cmd: python src/clean.py data/raw/prix_cacao_fao_2015_2024.csv 
+      data/clean/prix_cacao_clean.csv metrics/clean_metrics.json
+    deps:
+    - data/raw/prix_cacao_fao_2015_2024.csv
+    - src/clean.py
+    outs:
+    - data/clean/prix_cacao_clean.csv
+    metrics:
+    - metrics/clean_metrics.json
+  validate:
+    cmd: python src/validate.py data/clean/prix_cacao_clean.csv
+    deps:
+    - data/clean/prix_cacao_clean.csv
+    - src/validate.py
+    outs:
+    - gx/validation_summary.json
+  features:
+    cmd: python src/features.py data/clean/prix_cacao_clean.csv 
+      data/features/features_all.csv
+    deps:
+    - data/clean/prix_cacao_clean.csv
+    - src/features.py
+    outs:
+    - data/features/features_all.csv
+  split:
+    cmd: python src/split.py data/features/features_all.csv 
+      data/features/train.csv data/features/test.csv
+    deps:
+    - data/features/features_all.csv
+    - src/split.py
+    outs:
+    - data/features/test.csv
+    - data/features/train.csv

@@ -1,0 +1,5 @@
+outs:
+- md5: 1f02bfe9f233378f99bbe47d3878fb4d
+  size: 44132
+  hash: md5
+  path: prix_cacao_fao_2015_2024.csv

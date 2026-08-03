@@ -1,0 +1,6 @@
+/gx/uncommitted/data_docs
+mlflow.db
+mlruns/
+artifacts/
+__pycache__/
+*.pyc
