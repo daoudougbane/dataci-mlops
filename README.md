@@ -1,3 +1,4 @@
+# GBANE DAOUDOU ET KONE DOFONA 
 # Projet DataCI — Prédiction du prix du cacao (TP1 + TP2 MLOps)
 
 Ce dossier contient l'implémentation complète et EXÉCUTÉE des TP1 (pipeline DVC)
