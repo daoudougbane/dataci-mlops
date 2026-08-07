@@ -1,8 +1,8 @@
 tags.mlflow.runName  metrics.rmse  metrics.mae  metrics.r2  metrics.latency_ms
-         Prophet_v1   3442.138504  2862.278008   -2.146093          409.663404
-        LightGBM_v1   3571.823884  2988.089569   -2.387622            7.841674
-         XGBoost_v1   3483.329396  2890.398606   -2.221840            5.278508
+         XGBoost_v1   3516.730972  2922.896785   -2.283925              4.1224
+        LightGBM_v1   3571.823884  2988.089569   -2.387622              4.9068
+         Prophet_v1   3436.804108  2856.964232   -2.136349            550.8431
 
-Champion sÃ©lectionnÃ© : XGBoost_v1 (run_id=0599683946e9438db92b63adb6494840)
-RMSE=3483.33  MAE=2890.40  R2=-2.2218  latence=5.28 ms
-Model Registry : cacao_price_predictor, version 1, stage=Staging
+Champion sélectionné : XGBoost_v1 (run_id=3ccd0d07487246e4933c16ceb2e9b9a0)
+RMSE=3516.73  MAE=2922.90  R2=-2.2839  latence=4.12 ms
+Model Registry : cacao_price_predictor, version 3, stage=Staging

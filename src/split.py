@@ -1,13 +1,3 @@
-"""
-Stage DVC 'split' — Split chronologique 80% train / 20% test.
-
-Important : le split est TEMPOREL (pas aléatoire). Pour une série
-temporelle, un split aléatoire mélangerait passé et futur : le modèle
-verrait des dates "futures" pendant l'entraînement et serait évalué sur
-des dates "passées", ce qui produit une fuite d'information (data leakage)
-et surestime la performance réelle en production, où seul le passé est
-disponible pour prédire le futur.
-"""
 import pandas as pd
 import sys
 

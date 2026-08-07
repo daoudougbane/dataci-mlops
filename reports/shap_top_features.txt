@@ -1,7 +1,7 @@
 Top features (SHAP importance moyenne absolue) :
-  rolling_mean_4: 134.36
-  lag_7: 78.45
-  lag_30: 22.77
-  rolling_std_4: 13.52
-  mois_sin: 12.32
-  mois_cos: 7.59
+  rolling_mean_4: 117.89
+  lag_7: 68.45
+  lag_30: 23.69
+  rolling_std_4: 20.89
+  mois_sin: 16.17
+  mois_cos: 7.14

@@ -1,0 +1,11 @@
+dvc>=3.60
+great-expectations>=1.0
+mlflow>=3.0
+xgboost>=3.0
+lightgbm>=4.0
+prophet>=1.1
+shap>=0.45
+pandas>=2.0
+numpy>=2.0
+scikit-learn>=1.5
+matplotlib>=3.7

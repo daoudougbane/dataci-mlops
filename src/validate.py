@@ -1,22 +1,3 @@
-"""
-Stage DVC 'validate' — Suite Great Expectations (5 contraintes qualité)
-sur les données nettoyées de prix du cacao.
-
-Contraintes appliquées :
-1. La colonne 'date' ne doit jamais être nulle (clé temporelle obligatoire).
-2. 'prix_xof' doit être strictement positif (0 < prix <= 20000 XOF, borne
-   large pour couvrir les pics de marché sans laisser passer les valeurs
-   aberrantes comme les -250 XOF vues dans le brut).
-3. 'humidite_pct' doit être compris entre 0 et 100 (c'est un pourcentage).
-4. 'pays_origine' doit appartenir à un ensemble de pays producteurs connus
-   (cohérence référentielle).
-5. La colonne 'date' ne doit contenir aucune valeur dupliquée (unicité de
-   la clé temporelle, condition nécessaire pour un split chronologique
-   propre en aval).
-
-Le script utilise l'API Fluent de Great Expectations 1.x (contexte
-éphémère + Data Docs générés sur disque local).
-"""
 import sys
 import json
 import great_expectations as gx

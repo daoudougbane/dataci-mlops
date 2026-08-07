@@ -1,21 +1,3 @@
-"""
-Stage DVC 'features' — Feature engineering pour la prédiction du prix
-du cacao à J+7.
-
-Les données sont hebdomadaires (une ligne = une semaine), donc :
-- lag_7  = shift(1)  -> prix de la semaine précédente (7 jours)
-- lag_30 = shift(4)  -> prix il y a ~4 semaines (30 jours)
-On garde ici les deux conventions du sujet ; voir compte-rendu (question 1)
-pour la justification du choix shift(n) selon la fréquence des données.
-
-Features créées (6) :
-1. lag_7            : prix_xof décalé d'1 semaine
-2. lag_30           : prix_xof décalé de 4 semaines (~30 jours)
-3. rolling_mean_4   : moyenne mobile sur 4 semaines
-4. rolling_std_4    : écart-type mobile sur 4 semaines
-5. mois_sin         : encodage cyclique du mois (sinus)
-6. mois_cos         : encodage cyclique du mois (cosinus)
-"""
 import pandas as pd
 import numpy as np
 import sys

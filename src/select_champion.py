@@ -5,6 +5,10 @@ mlflow.set_tracking_uri('sqlite:///mlflow.db')
 client = MlflowClient()
 
 runs = mlflow.search_runs(experiment_names=['cacao_price_prediction'])
+runs = runs.sort_values('start_time').drop_duplicates(
+    subset=['tags.mlflow.runName'], keep='last'
+)
+
 cols = ['tags.mlflow.runName', 'metrics.rmse', 'metrics.mae', 'metrics.r2', 'metrics.latency_ms']
 print(runs[cols].to_string(index=False))
 

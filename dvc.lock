@@ -30,13 +30,13 @@ stages:
       size: 43330
     - path: src/validate.py
       hash: md5
-      md5: 15217e8b67844e513e9917415f99dc76
-      size: 4453
+      md5: 2e90e87d2876706b9cab408c2ae75fce
+      size: 3540
     outs:
     - path: gx/validation_summary.json
       hash: md5
-      md5: 038d9a1e4705797150af8daeb8796184
-      size: 825
+      md5: 7f9b4995a689488774884a62a2fd9139
+      size: 871
   features:
     cmd: python src/features.py data/clean/prix_cacao_clean.csv 
       data/features/features_all.csv
@@ -47,31 +47,31 @@ stages:
       size: 43330
     - path: src/features.py
       hash: md5
-      md5: 32d64e223fa153fb77896542515cb43a
-      size: 2527
+      md5: 4fe60c8538b4f8fbb2208c6fc0f9052a
+      size: 1722
     outs:
     - path: data/features/features_all.csv
       hash: md5
-      md5: 32e4cd6b9202db40387434160da95575
-      size: 83223
+      md5: e4403f8e8fa04ee679cf898876a9ed67
+      size: 83735
   split:
     cmd: python src/split.py data/features/features_all.csv 
       data/features/train.csv data/features/test.csv
     deps:
     - path: data/features/features_all.csv
       hash: md5
-      md5: 32e4cd6b9202db40387434160da95575
-      size: 83223
+      md5: e4403f8e8fa04ee679cf898876a9ed67
+      size: 83735
     - path: src/split.py
       hash: md5
-      md5: c3258401e8f6f785a2ea53cc541f8cf8
-      size: 987
+      md5: 919d6b596428a8070100ccf9373b6cff
+      size: 512
     outs:
     - path: data/features/test.csv
       hash: md5
-      md5: 9d2f5b31822b42f093904df87134d639
-      size: 16870
+      md5: d99aae5cb792c80e4d2db3f522828953
+      size: 16974
     - path: data/features/train.csv
       hash: md5
-      md5: 1e436aea695c8a1fe40182a6e6677a39
-      size: 65538
+      md5: 0e9c098b7029d3e963ffe9f7a8da8bf4
+      size: 65947
